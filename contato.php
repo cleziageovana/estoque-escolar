@@ -22,7 +22,7 @@
                 <div class="fotos"> 
                     <div class="card shadow-sm">
                         <title>Clezia</title>
-                        <img src="./imagen/IpeAmarelo.jpg" class="imagemcontato" alt=""/>
+                        <img src="./imagen/fotoclezia.jpg" class="imagemcontato" alt=""/>
                         <div class="card-body">
                         <p class="card-text">Clezia
                         </p>
@@ -31,7 +31,7 @@
 
                     <div class="card shadow-sm">
                         <title>Clezia</title>
-                        <img src="./imagen/IpeAmarelo.jpg" class="imagemcontato" alt=""/>
+                        <img src="./imagen/fotodavi.jpg" class="imagemcontato" alt=""/>
                         <div class="card-body">
                         <p class="card-text">Davi
                         </p>
@@ -40,7 +40,7 @@
 
                     <div class="card shadow-sm">
                         <title>Clezia</title>
-                        <img src="./imagen/IpeAmarelo.jpg" class="imagemcontato" alt=""/>
+                        <img src="./imagen/fotoelizete.jpg" class="imagemcontato" alt=""/>
                         <div class="card-body">
                         <p class="card-text">Elizete
                         </p>
