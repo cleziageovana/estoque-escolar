@@ -41,7 +41,7 @@ $produtos = $produto->listar();
                             <th> id Nota</th>
                             <th> id Fornecedor</th>
                             <th> id Recurso</th>
-                            <th> Opeção</th>
+                            <th> Opeções</th>
                         </thead>
 
                         <tbody>
@@ -60,7 +60,7 @@ $produtos = $produto->listar();
                                         <td><?php echo $produto['id_recurso']?></td>
 
                                         <td>
-                                            <a href="excluir.php?id=<?php echo $produto['id_produto'] ?>" class="btn btn-danger"> Excluir </a>
+                                            <a href="excluir-produtos.php?id=<?php echo $produto['id_produto'] ?>" class="btn btn-danger"> Excluir </a>
                                             <a href="editar-produtos.php?id=<?php echo $produto['id_produto'] ?>" class="btn btn-warning"> Editar </a>
                                         </td>
                                     </tr>
@@ -68,7 +68,6 @@ $produtos = $produto->listar();
                             </tbody>
                         </table>
     </div>
-        <footer class="menurp"><a href="" class="paragrafo">-->Desenvolvido pela Segunda Turma do Curso Técnico de Informática<--</a></footer>
 
     
 </body>

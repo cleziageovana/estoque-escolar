@@ -6,8 +6,12 @@ require_once "./fornecedores/Fornecedor.php";
 
 
 $produto = new Produto();
-$id_produto = $_GET['id_produto'];
-$produtos = $produto->info_produto();
+$id_produto = $_GET['id'];
+$produtos = $produto->info_produto($id_produto);
+// print_r($produtos);
+if (isset($_POST['id_produto'])) {
+    $produto->editar($id_produto);
+}
 
 ?>
 
@@ -36,37 +40,37 @@ $produtos = $produto->info_produto();
             
             <div class="container">
                 <fieldset>
-                    <legend> Cadastrar Produto </legend>
+                    <legend> Editar Produto </legend>
                     <form method="POST">
                         <div class="row">
                             <label>Nome Produto</label>
-                            <input type="text" class="form-control" name="nome_produto"/>
+                            <input type="text" class="form-control" name="nome_produto" value="<?php echo $produtos['nome_produto']?>"/>
 
                             <label>Unidade Medida</label>
-                            <input type="text" class="form-control" name="unidade_medida"/>
+                            <input type="text" class="form-control" name="unidade_medida" value="<?php echo $produtos['unidade_medida']?>"/>
 
                             <label>Data Validade</label>
-                            <input type="date" class="form-control" name="data_validade"/> 
+                            <input type="text" class="form-control" name="data_validade" value="<?php echo $produtos['data_validade']?>"/> 
 
                             <label>id Nota</label>
-                            <input type="number" class="form-control" name="id_nota"/>
+                            <input type="number" class="form-control" name="id_nota" value="<?php echo $produtos['id_nota']?>"/>
                             
                             <label>Fornecedor</label>
-                            <select class="form-control" name="id_fornecedor"> 
+                            <select class="form-control" name="id_fornecedor" value="<?php echo $produtos['id_fornecedor']?>"> 
                                 <option value="">Selecione</option>
                                 <?php foreach($fornecedores as $fornecedor):?>
-                                    <option value="<?php echo $fornecedor['id_fornecedor'] ?>"><?php echo $fornecedor['nome_fornecedor'] ?></option>
+                                <option value="<?php echo $fornecedor['id_fornecedor'] ?>"><?php echo $fornecedor['nome_fornecedor'] ?></option>
 
                                 <?php endforeach; ?>    
                             </select>
                          
                             <label>id Recurso</label>
-                            <input type="number" class="form-control" name="id_recurso"/>
+                            <input type="number" class="form-control" name="id_recurso" value="<?php echo $produtos['id_recurso']?>"/>
 
-                            <input type="hidden" value="<?php echo $id_produto['id_produto'] ?>"/>
+                            <input type="hidden" name="id_produto" value="<?php echo $id_produto['id_produto'] ?>"/>
 
 
-                            <button type="submit" class="btn btn-success">Cadastrar</button>
+                            <button type="submit" class="btn btn-success">Atualizar</button>
                         </div>    
                     </form>
                 </fieldset>
@@ -74,7 +78,6 @@ $produtos = $produto->info_produto();
 
         </div>
 
-        <footer class="menurp"><a href="" class="paragrafo">-->Desenvolvido pela Segunda Turma do Curso Técnico de Informática<--</a></footer>
 
     
 </body>

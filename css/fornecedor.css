@@ -15,17 +15,27 @@ body{
 .fundo-lista-forn{
     background-color: white;
     width: 1400px;
-    height: 630px;
+    max-height: 630px;
     border-radius: 30px;
     margin: auto;
     margin-top: 40px;
-    overflow-x: auto;
+    padding: 20px;
+    overflow: auto;
+}
+
+.fundo-editar-forn{
+    background-color: white;
+    width: 920px;
+    max-height: 630px;
+    border-radius: 30px;
+    margin: auto;
+    padding: 20px;    
+    margin-top: 70px;
 }
 
 h1{
     font-size: 30px;
     text-align: center;
-    padding: 30px;
 }
 
 .container{
@@ -36,7 +46,11 @@ h1{
 .btn-cadastrar{
     margin-left: 0%;
     margin-top: 20px;
+}
 
+.btn-editar{
+    margin-left: 0%;
+    margin-top: 20px;
 }
 
 .table{
